@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--orange);
+  color: rgb(255, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+  border: 4px solid transparent;
+  background-clip: content-box;
+  /* THIS IS IMPORTANT */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(64 67 79);
+  /* border: 1px solid rgb(0,0,0); */
+  border-radius: 20px;
+  border: 6px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 0, 0);
+  z-index: 6000;
+  display: flex;
+  /* padding: 1.6rem 7%; */
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 2.18rem;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: var(--orange);
+}
+
+header .navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 0.8rem;
+}
+
+header .navbar a:hover {
+  color: #b30300;
+}
+
+header .icons i {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  margin-right: 1.9rem;
+}
+
+header .icons i:hover {
+     color: #b30300;
+}
+
+.icons {
+  display: flex;
+  align-content: center;
+}
+nav.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.login-form-container {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7) !important;
+  display: flex !important ;
+  border: none !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container.active {
+  top: 0;
+}
+
+.login-form-container form {
+  margin: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  width: 20rem;
+}
+
+.login-form-container form h3 {
+  font-size: 3rem;
+  color: #0c0c0b;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.login-form-container form .box {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  margin: 0.6rem 0;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  text-transform: none;
+}
+
+.login-form-container form .box:focus {
+  border-color: var(--orange);
+}
+
+.login-form-container form #remember {
+  margin: 2rem 0;
+}
+
+.login-form-container form label {
+  font-size: 1.5rem;
+}
+
+.login-form-container form .btn {
+  display: block;
+  width: 100%;
+}
+
+.login-form-container form p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.login-form-container form p a {
+  color: var(--orange);
+}
+
+.login-form-container form p a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+.logindebug{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+}
+.marginlabel{
+     margin-left: 12px;
+}
+.login-form-container #form-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.bg-img{
+     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("patnajunction.jpg");
+     background-size:contain;
+     padding: 20px;
+     box-shadow: -1px 12px 20px rgb(0 0 0 / 28%);
+     width: 100%;
+}
+.ticketbook {
+  margin-top: 6.2rem !important;
+  margin-left: 3rem;
+  width: 20%;
+  min-width:224px;
+  padding: 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+  z-index: 2000;
+}
+.sticker-heading {
+  vertical-align: baseline;
+}
+.sticker-heading-text {
+  /* font-family: "Flow Circular", cursive; */
+  font-family: sans-serif !important;
+  color: #222222;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+
+.input-text {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 8px 16px !important;
+  box-shadow: #dddddd 0 0 0 1px inset !important;
+  border-radius: 8px !important;
+  margin: 0 0 8px 0px;
+  /* display: inline-block !important; */
+}
+
+.input-innertext {
+  position: relative !important;
+  cursor: text !important;
+  display: inline-block !important;
+  min-height: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+  color: #222222 !important;
+  background-color: #ffffff !important;
+  font-family: sans-serif !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  font-weight: 400 !important;
+  height: auto !important;
+}
+
+.banner{
+     color:white;
+     position:fixed;
+     display: flex;
+     align-items: center;
+     margin-top: 14rem;
+     margin-left: 53%;
+
+}
+.bannerimg{
+    height: 42px;
+    width: 42px;
+}
+.banner-img{
+     margin-right: 12px;
+}
+.bannerinnertext{
+     font-size: 2rem;
+}
+.h1{
+     font-family: sans-serif !important;
+}
+
+.btn  {
+     display: inline-block;
+     margin-top: 1rem;
+     background: black;
+     color: white;
+     cursor: pointer;
+     font-family: sans-serif !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-weight: 400 !important;
+    height: auto !important;
+    padding: 8px 16px !important;
+    box-shadow: #dddddd 0 0 0 1px inset !important;
+    box-shadow: #dddddd 0px 0px 12px 1px inset !important;
+
+ }
+     .btn:hover {
+     background: black;
+     color:red;
+     }
+
+.secondheader{
+     margin-top: 6.2rem;
+     padding: 0;
+   
+}
+
+
+
+   .container {
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: center;
+     align-items: flex-start;
+     flex-wrap: nowrap;
+ }
+
+
+nav.secondnavbar{
+     background: rgba(0, 0, 0, 0);
+}
+.navbar a {
+     color: #fff;
+     font-weight: 800;
+     font-size:22px;
+     margin: 0 28px;
+     
+}
+
+.navbar a:hover{
+
+    color: #b30300;
+   text-shadow:1px 10px 1px rgb(148 47 47 / 20%) ;
+ 
+}
+
+.redcolor{
+     color:red
+}
+
+.lineartrans{
+     background: -webkit-linear-gradient(#ff0000f2, #000000);
+     text-shadow:1px 6px 1px rgb(148 47 47 / 20%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.bottomcontainer{
+     background-color: #ffffff;
+     /* width: 60%; */
+     display: flex;
+     margin-left: 37%;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     position: relative;
+     top: -72px;
+     margin-left: 23%;
+     z-index: 2;
+     box-shadow: 0 6px 20px rgb(0 0 0 / 20%);
+     border-radius: 12px;
+     margin-right: 40px;
+     padding: 0px 30px 40px 30px;
+ }
+
+
+.bottomheading{
+     padding:30px 25px 25px 25px;
+}
+.bottomtext{
+     display: flex;
+     justify-content: center;
+     font-weight: 800;
+    font-size: 28px;
+    line-height: 36px;
+    font-family: sans-serif !important;
+}
+
+.holidaylist{
+     display: flex;
+     justify-content: space-around;
+
+}
+
+.bottom-list{
+     width:27%;
+     background-color: #00000036;
+}
+
+
+.boxgallery-container{
+  display: flex;
+  gap: 2.5rem;
+  margin: 1rem;
+}
+
+.boxgallery-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgb(36, 36, 36);
+ 
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.boxgallery-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.boxgallery-container .box .content{
+  position: absolute;
+  top:-132%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0,0,0,.7);
+  padding-top: 5rem;
+}
+
+.boxgallery-container .box:hover .content{
+  top:0;
+}
+
+.boxgallery-container .box .content h3{
+  font-size: 2.5rem;
+  color: wheat;
+}
+
+.boxgallery-container .box .content p{
+  font-size: 1.5rem;
+  color:#eee;
+  padding:.5rem 0;
+}
+
+.navbarmargin{
+  margin-right:20px;
+}
